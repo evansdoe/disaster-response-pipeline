@@ -168,7 +168,7 @@ def get_scores(y_true, y_pred):
     accuracy = accuracy_score(y_true, y_pred)
     
     # Compute the precision score of y_true and y_pred
-    precision =round( precision_score(y_true, y_pred, average='micro'))
+    precision = round(precision_score(y_true, y_pred, average='micro'))
     
     # Compute the recall score of y_true and y_pred
     recall = recall_score(y_true, y_pred, average='micro')
