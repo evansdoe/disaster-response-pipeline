@@ -8,26 +8,18 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-from sklearn.externals import joblib
+#from sklearn.externals import joblib 
+import joblib
 from sqlalchemy import create_engine
+from custom_transformer import DisasterWordExtrator, replace_urls, tokenize
 
 
 app = Flask(__name__)
 
-def tokenize(text):
-    tokens = word_tokenize(text)
-    lemmatizer = WordNetLemmatizer()
-
-    clean_tokens = []
-    for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
-        clean_tokens.append(clean_tok)
-
-    return clean_tokens
-
 # load data
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('disaster_categories', engine)
+
 
 # load model
 model = joblib.load("../models/classifier.pkl")
@@ -42,6 +34,12 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+    
+    res_df = df.drop(columns=['id', 'message', 'original', 'genre']);
+    
+    res_count = res_df.sum().sort_values(ascending=False)[:10]
+    
+    res_categories = res_count.index
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -61,6 +59,25 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        }, 
+        
+        {
+            'data': [
+                Bar(
+                    x=res_categories,
+                    y=res_count
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10 Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Message Categories"
                 }
             }
         }
