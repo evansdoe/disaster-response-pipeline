@@ -11,7 +11,7 @@ In this project I use the [datasets](https://github.com/evansdoe/disaster-respon
 
 1. Build an ETL (Extract, Transform, Load) Pipeline to repair the data.
 
-2. Build a supervised learning model using a machine leaning Pipeline.
+2. Build a supervised learning model using a machine learning Pipeline.
 
 3. Build a web app that does the following:
 
