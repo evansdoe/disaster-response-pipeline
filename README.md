@@ -22,15 +22,16 @@ In this project I use the [datasets](https://github.com/evansdoe/disaster-respon
 The installation instructions are as follows.
 
 ### Dependencies
-* [Python (>=3.6)](https://www.python.org/downloads/)
-* [Pandas](https://pandas.pydata.org/)
-* [Numpy](https://numpy.org/)
-* [Sqlalchemy](https://www.sqlalchemy.org/)
-* [Sys](https://docs.python.org/3/library/sys.html)
-* [Plotly](https://plotly.com/python/)
-* [Sklearn](https://sklearn.org/)
-* [Joblib](https://joblib.readthedocs.io/en/latest/)
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [python (>=3.6)](https://www.python.org/downloads/)
+* [pandas](https://pandas.pydata.org/)
+* [numpy](https://numpy.org/)
+* [sqlalchemy](https://www.sqlalchemy.org/)
+* [sys](https://docs.python.org/3/library/sys.html)
+* [plotly](https://plotly.com/python/)
+* [sklearn](https://sklearn.org/)
+* [joblib](https://joblib.readthedocs.io/en/latest/)
+* [flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [nltk](https://www.nltk.org/)
 
 ### Download and Installation
 ```console
