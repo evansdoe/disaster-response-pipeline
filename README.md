@@ -43,7 +43,7 @@ While in the project's root directory `disaster-response-pipeline` run the ETL p
 ```console
 foo@bar:disaster-response-pipeline $ python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 ```
-Next, run the ML pipeline that trains the classifier and saves it.
+Next, run the ML pipeline that trains the classifier and save it.
 ```console
 foo@bar:disaster-response-pipeline $ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
