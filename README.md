@@ -7,7 +7,7 @@
 3. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Project Motivation<a name="motivation"></a>
-In this project I use the [datasets](https://github.com/evansdoe/disaster-response-pipeline/tree/main/data) from real life disasters provided by [Figure Eight](https://appen.com/) to perform the following tasks:
+In this project I use the [datasets](https://github.com/evansdoe/disaster-response-pipeline/tree/main/data) from real-life disasters provided by [Figure Eight](https://appen.com/) to perform the following tasks:
 
 1. Build an ETL (Extract, Transform, Load) Pipeline to repair the data.
 
@@ -56,9 +56,9 @@ foo@bar:app $ python run.py
 
 Finally, go to http://0.0.0.0:3001/ or http://localhost:3001/ in your web-browser.
 
-Type a message input box and click on the `Classify Message` button to see how the various categories that your message falls into.
+Type a message input box and click on the `Classify Message` button to see the various categories that your message falls into.
 
 
 ## Licensing and Acknowledgements<a name="licensing"></a>
 
-Big credit goes to [Figure Eight](https://appen.com/) for the relabelling the datasets and also to the teaching staffs at [Udacity](https://www.udacity.com/). Finally, the repository is distributed under the [GNU GPLv3 license](https://github.com/evansdoe/stackoverflow_2020_survey/blob/main/LICENSE).
+Big credit goes to [Figure Eight](https://appen.com/) for relabelling the datasets and also to the teaching staffs at [Udacity](https://www.udacity.com/). Finally, the repository is distributed under the [GNU GPLv3 license](https://github.com/evansdoe/stackoverflow_2020_survey/blob/main/LICENSE).
